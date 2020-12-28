@@ -6,7 +6,7 @@ git 'https://github.com/tejasrik/e2e.git'
  stage('Compile-Package'){
       // Get maven home path
      //def mvnHome =  tool name: 'maven3.6.3', type: 'maven' 
-     //batlabel "${mvnHome}/bin/mvn package"
+     //batlabel "${mvnHome}/bzin/mvn package"
   // bat "${mvnHome}/bin/mvn clean package"
  // bat label: '', script: "${mvnHome}/bin/mvn clean package"
          def mavenHome = tool name:"Maven-3.6.3",type: "maven"
