@@ -34,5 +34,5 @@ url: "https://github.com/tejasrikaratam/maven-selenium-webdriver-testng-example-
                 }
         }
         notify('Sucess')
-        }
+        
 }
