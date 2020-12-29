@@ -1,4 +1,4 @@
-package testcases.mytheresa;
+/*package testcases.mytheresa;
 
 import org.openqa.selenium.WebDriver;
 
@@ -79,3 +79,4 @@ public class NewUserJourney {
 	}
 
 }
+*/
