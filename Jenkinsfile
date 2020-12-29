@@ -1,3 +1,3 @@
-@Library('maven-selenium-webdriver-testng-example-project@master') _
+@Library('shared-library@master') _
 
 
