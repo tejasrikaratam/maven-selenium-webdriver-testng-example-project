@@ -9,10 +9,7 @@ branch: "master",
 url: "https://github.com/tejasrikaratam/maven-selenium-webdriver-testng-example-project.git"
 )
 }
- stage('clean') {
-            // Run the maven build
-            sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean"
-            }
+
  stage('Compile-Package'){
       // Get maven home path
      //def mvnHome =  tool name: 'maven3.6.3', type: 'maven' 
