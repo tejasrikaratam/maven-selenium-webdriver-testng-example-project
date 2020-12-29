@@ -32,7 +32,6 @@ url: "https://github.com/tejasrikaratam/maven-selenium-webdriver-testng-example-
                 stage('Start Tomcat') {
                 sh "ssh -T 'root@${server}' /opt/apache-tomcat-8.5.31/bin/./startup.sh"
                 }
-        }
         notify('Sucess')
         
 }
