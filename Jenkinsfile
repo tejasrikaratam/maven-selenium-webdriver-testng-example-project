@@ -25,10 +25,11 @@ url: "https://github.com/tejasrik/e2e.git"
  stage('Code Quality Check via SonarQube') {
       
        def scannerHome = tool 'sonarqube';
-          /* withSonarQubeEnv("My SonarQube Server") {
-           sh "${tool("sonarqube")}/bin/sonar-scanner \*/
-  def sonarScanner = tool name: 'SonarQube', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
-              sh "${sonarScanner}/bin/sonar-scanner -e -Dsonar.host.url=http://54.225.239.136:9000,-Dsonar.projectKey = multibranch,-Dsonar.sources=maven-selenium-webdriver-testng-example-project",-Dsonar.login=25f5fbbc5c62654b506e24049302da0aaa34370e /}
+           withSonarQubeEnv("My SonarQube Server") {
+           sh "${tool("sonarqube")}/bin/sonar-scanner 
+          -Dsonar.projectKey = multibranch,
+           -Dsonar.sources=maven-selenium-webdriver-testng-example-project",
+           -Dsonar.login=25f5fbbc5c62654b506e24049302da0aaa34370e /}
       
            }
  
