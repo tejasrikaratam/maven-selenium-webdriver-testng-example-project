@@ -28,7 +28,7 @@ url: "https://github.com/tejasrik/e2e.git"
            withSonarQubeEnv("My SonarQube Server") {
            sh "${tool("sonarqube")}/bin/sonar-scanner \
            -Dsonar.projectKey=jenkins \
-           -Dsonar.sources=. \
+           -Dsonar.sources=maven-selenium-webdriver-testng-example-project\
            -Dsonar.host.url=http://54.225.239.136:9000/ \
            -Dsonar.login=9a628e5b34d1ad6114d1ae4bbc2768dfd8565b58"
            }
