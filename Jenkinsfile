@@ -27,13 +27,11 @@ url: "https://github.com/tejasrik/e2e.git"
        def scannerHome = tool 'sonarqube';
            withSonarQubeEnv("sonarqube-container") {
            sh "${tool("sonarqube")}/bin/sonar-scanner"
-           -Dsonar.projectKey=jenkins \
-           -Dsonar.sources=maven-selenium-webdriver-testng-example-project \
-           -Dsonar.host.url=http://54.225.239.136:9000 \
-           -Dsonar.login=9a628e5b34d1ad6114d1ae4bbc2768dfd8565b58"
+           -Dsonar.projectKey=multibranch \
+  -Dsonar.host.url=http://54.225.239.136:9000 \
+  -Dsonar.login=9a628e5b34d1ad6114d1ae4bbc2768dfd8565b58
            }
- }
-           
+ 
        
    }
   
