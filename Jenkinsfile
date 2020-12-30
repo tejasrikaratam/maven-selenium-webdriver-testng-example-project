@@ -38,17 +38,6 @@ url: "https://github.com/tejasrik/e2e.git"
        
    }
   
-                stage('Stop Tomcat') {
-                sh "ssh -T 'root@${server}' /opt/apache-tomcat-8.5.31/bin/./shutdown.sh"
-                }
-        
-                stage('War File Deployment') {
-                sh "ssh -T 'root@${server}' rm -f /opt/apache-tomcat-8.5.31/webapps/petclinic.war rm -fr /opt/apache-tomcat-8.5.31/webapps/petclinic"
-                sh "scp target/petclinic.war 'root@${server}':/opt/apache-tomcat-8.5.31/webapps/"
-                }
-                stage('Start Tomcat') {
-                sh "ssh -T 'root@${server}' /opt/apache-tomcat-8.5.31/bin/./startup.sh"
-                }
-        notify('Sucess')
-        
-}
+               
+}   
+
