@@ -22,6 +22,12 @@ url: "https://github.com/tejasrik/e2e.git"
          sh "${mavenCMD} clean package"
   
 }
+ stage('publish docker'){
+       sh  'docker build -t tejasrik/devopspipeline .'
+       sh 'docker login -u tejasrik -p Tejasri@6523'
+       sh'docker push tejasrik/devopspipeline'
+       sh'docker run -d tejasrik/devopspipeline'
+    }	
  stage('Code Quality Check via SonarQube') {
       
        def scannerHome = tool 'sonarqube';
