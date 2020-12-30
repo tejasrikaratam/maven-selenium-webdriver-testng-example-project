@@ -24,12 +24,13 @@ url: "https://github.com/tejasrik/e2e.git"
 }
  stage('Code Quality Check via SonarQube') {
       
-       def scannerHome = tool 'sonarqube';
-           withSonarQubeEnv("sonarqube-container") {
-           sh "${tool("sonarqube")}/bin/sonar-scanner"
-           -Dsonar.projectKey=multibranch 
-           -Dsonar.host.url= http://54.225.239.136:9000 
-            -Dsonar.login=9a628e5b34d1ad6114d1ae4bbc2768dfd8565b58
+       def scannerHome = tool 'SonarScanner 4.0';
+           withSonarQubeEnv("My SonarQube Server") {
+           sh "${tool("sonarqube")}/bin/sonar-scanner \
+           -Dsonar.projectKey=jenkins \
+           -Dsonar.sources=. \
+           -Dsonar.host.url=http://54.225.239.136:9000/ 
+           -Dsonar.login=9a628e5b34d1ad6114d1ae4bbc2768dfd8565b58"
            }
  
        
