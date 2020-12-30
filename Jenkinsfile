@@ -30,7 +30,7 @@ url: "https://github.com/tejasrik/e2e.git"
            -Dsonar.projectKey=multibranch \
            -Dsonar.sources=maven-selenium-webdriver-testng-example-project\
            -Dsonar.host.url=http://54.225.239.136:9000/ \
-           -Dsonar.login=9a628e5b34d1ad6114d1ae4bbc2768dfd8565b58"
+           -Dsonar.login=25f5fbbc5c62654b506e24049302da0aaa34370e"
            }
  
        
