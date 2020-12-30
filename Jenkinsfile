@@ -25,7 +25,7 @@ url: "https://github.com/tejasrik/e2e.git"
  stage('Code Quality Check via SonarQube') {
       
        def scannerHome = tool 'SonarScanner 4.0';
-           withSonarQubeEnv("My SonarQube Server") {
+           withSonarQubeEnv("sonarqube-container") {
            sh "${tool("sonarqube")}/bin/sonar-scanner \
            -Dsonar.projectKey=jenkins \
            -Dsonar.sources=maven-selenium-webdriver-testng-example-project\
