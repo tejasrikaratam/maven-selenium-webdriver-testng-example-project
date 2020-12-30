@@ -6,7 +6,7 @@ stage('SCM Checkout')
  
  gitCheckout(
 branch: "master",
-url: "https://github.com/tejasrikaratam/maven-selenium-webdriver-testng-example-project.git"
+url: "https://github.com/tejasrika/e2e.git"
 )
 }
 
