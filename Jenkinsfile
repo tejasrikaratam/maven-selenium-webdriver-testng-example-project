@@ -26,6 +26,7 @@ url: "https://github.com/tejasrik/e2e.git"
       
        def scannerHome = tool 'sonarqube';
            withSonarQubeEnv("My SonarQube Server") {
+            def sonarscanner = tool name:"SonarScanner 4.0",type: "sonarscanner"
            sh "${tool("sonarqube")}/bin/sonar-scanner \
           -Dsonar.projectKey = multibranch \
            -Dsonar.sources=maven-selenium-webdriver-testng-example-project \
