@@ -6,7 +6,7 @@ stage('SCM Checkout')
  
  gitCheckout(
 branch: "master",
-url: "https://github.com/tejasrika/e2e.git"
+url: "https://github.com/tejasrik/e2e.git"
 )
 }
 
