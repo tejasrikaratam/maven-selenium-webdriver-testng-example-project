@@ -18,6 +18,10 @@ stage('Compile-Package'){
 }
  
  stage('Compile-Package'){
+ sonar()
+   
+}
+ stage('Compile-Package'){
       // Get maven home path
      //def mvnHome =  tool name: 'maven3.6.3', type: 'maven' 
      //batlabel "${mvnHome}/bin/mvn package"
