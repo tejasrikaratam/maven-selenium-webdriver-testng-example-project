@@ -17,7 +17,7 @@ stage('Compile-Package'){
    
 }
  
- stage('Compile-Package'){
+ stage('SonarQube Analysis'){
  sonar()
    
 }
