@@ -10,7 +10,6 @@ url: "https://github.com/tejasrik/e2e.git"
 )
 }
 
-@Library('shared-library@master') _
 stage('Compile-Package'){
   
 def utils = new Utilities(this)
