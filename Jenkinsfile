@@ -22,6 +22,12 @@ url: "https://github.com/tejasrik/e2e.git"
          sh "${mavenCMD} clean package"
   
 }
+ stage('SonarQube Analysis'){
+  def mvnHome =tool name: "Maven-3.6.3",type: "maven"
+  withSonarQubeEnv('sonar-6') {
+  sh "{mvnHome}/bin/mvn/ sonar:sonar"
+ }
+ }
  stage('publish docker'){
        sh  'docker build -t tejasrik/devopspipeline .'
        sh 'docker login -u tejasrik -p Tejasri@6523'
