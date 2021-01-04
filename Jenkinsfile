@@ -10,6 +10,14 @@ url: "https://github.com/tejasrik/e2e.git"
 )
 }
 
+ @Library('shared-library@master') import org.foo.Utilities
+def utils = new Utilities(this)
+node {
+  utils.mvn 'clean package'
+}
+ 
+ 
+ 
  stage('Compile-Package'){
       // Get maven home path
      //def mvnHome =  tool name: 'maven3.6.3', type: 'maven' 
