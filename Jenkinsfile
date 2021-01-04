@@ -23,7 +23,7 @@ url: "https://github.com/tejasrik/e2e.git"
   
 }
  stage('SonarQube Analysis'){
-  def mvnHome =tool name: "Maven-3.6.3",type: "maven"
+  def mavenHome = tool name: "Maven-3.6.3",type: "maven"
   withSonarQubeEnv('sonar-6') {
   sh "{mvnHome}/bin/mvn/ sonar:sonar"
  }
