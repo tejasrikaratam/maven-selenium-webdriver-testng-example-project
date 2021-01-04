@@ -34,20 +34,7 @@ url: "https://github.com/tejasrik/e2e.git"
        sh'docker push tejasrik/devopspipeline'
        sh'docker run -d tejasrik/devopspipeline'
     }	
- stage('Code Quality Check via SonarQube') {
-      
-       def scannerHome = tool 'sonarqube';
-           withSonarQubeEnv("My SonarQube Server") {
-            def sonarscanner = tool name:"SonarScanner 4.0",type: "sonarscanner"
-           sh "${tool("sonarqube")}/bin/sonar-scanner \
-          -Dsonar.projectKey = multibranch \
-           -Dsonar.sources=maven-selenium-webdriver-testng-example-project \
-           -Dsonar.login=25f5fbbc5c62654b506e24049302da0aaa34370e"
-      
-           }
  
-       
-   }
   
                
 
