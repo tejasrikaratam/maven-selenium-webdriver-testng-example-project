@@ -1,5 +1,5 @@
 @Library('shared-library@master') _
-@Library('utils') import org.foo.Utilities
+
 
 
 node {
@@ -13,14 +13,9 @@ url: "https://github.com/tejasrik/e2e.git"
 }
 
 stage('Compile-Package'){
-  
-def utils = new Utilities(this)
-node {
-  utils.mvn 'clean package'
- 
-}
+  Utilities()
    
- 
+}
  
  stage('Compile-Package'){
       // Get maven home path
