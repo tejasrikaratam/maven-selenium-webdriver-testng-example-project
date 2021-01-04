@@ -25,7 +25,7 @@ stage('Compile-Package'){
  stage('publish docker'){
   docker()
  }
- stage('Compile-Package'){
+ /*stage('Compile-Package'){
       // Get maven home path
      //def mvnHome =  tool name: 'maven3.6.3', type: 'maven' 
      //batlabel "${mvnHome}/bin/mvn package"
@@ -48,7 +48,7 @@ stage('Compile-Package'){
        sh 'docker login -u tejasrik -p Tejasri@6523'
        sh'docker push tejasrik/devopspipeline'
        sh'docker run -d tejasrik/devopspipeline'
-    }	
+    }	*/
  
   
                
