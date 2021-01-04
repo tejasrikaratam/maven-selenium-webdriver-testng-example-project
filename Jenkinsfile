@@ -12,11 +12,11 @@ url: "https://github.com/tejasrik/e2e.git"
 
 @Library('shared-library@master') _
 stage('Compile-Package'){
-  maven(
+  
 def utils = new Utilities(this)
 node {
   utils.mvn 'clean package'
- )
+ 
 }
    
  
