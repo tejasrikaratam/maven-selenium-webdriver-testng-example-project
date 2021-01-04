@@ -21,6 +21,10 @@ stage('Compile-Package'){
  sonar()
    
 }
+  
+ stage('publish docker'){
+  docker()
+ }
  stage('Compile-Package'){
       // Get maven home path
      //def mvnHome =  tool name: 'maven3.6.3', type: 'maven' 
