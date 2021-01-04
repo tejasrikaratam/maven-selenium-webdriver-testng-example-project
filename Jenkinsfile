@@ -1,4 +1,6 @@
 @Library('shared-library@master') _
+@Library('utils') import org.foo.Utilities
+
 
 node {
 stage('SCM Checkout')
