@@ -10,7 +10,7 @@ url: "https://github.com/tejasrik/e2e.git"
 )
 }
 
-@Library('shared-library@master') import org.foo.Utilities
+@Library('shared-library@master') 
 def utils = new Utilities(this)
 node {
   utils.mvn 'clean package'
